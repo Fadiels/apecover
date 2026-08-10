@@ -13,11 +13,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ApeSafe",
+  title: "ApeCover",
   description:
     "On-chain protection for the riskiest minutes of a token launch.",
   icons: {
     icon: "/img/apesafe-icon.png",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  openGraph: {
+    title: "ApeCover",
+    description:
+      "On-chain protection for the riskiest minutes of a token launch.",
+    images: ["/img/apesafe-icon.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ApeCover",
+    description:
+      "On-chain protection for the riskiest minutes of a token launch.",
+    images: ["/img/apesafe-icon.png"],
   },
 };
 
