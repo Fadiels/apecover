@@ -244,7 +244,7 @@ export default function Home() {
         <div id="utility" className="max-w-6xl mx-auto py-10">
           <div className="space-y-6 text-center">
             <div className="text-left space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 md:items-stretch">
-              <h2 className="text-2xl mb-6 font-bold text-center mb-2 md:text-6xl md:text-left lg:text-4xl ">
+              <h2 className="text-2xl mb-6 font-bold text-center md:text-6xl md:text-left ">
                 <HugeiconsIcon
                   icon={AiSecurity03Icon}
                   className="inline-block mr-2"
