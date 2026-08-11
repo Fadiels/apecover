@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -38,6 +40,7 @@ import {
 import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
 import Link from "next/link";
+import { toast } from "sonner";
 
 const protectionOptions = [
   {
@@ -113,14 +116,14 @@ export default function Home() {
               alt="ApeCover"
               width="150"
               height="150"
-              className="mx-auto mt-20"
+              className="mx-auto mt-20 img"
             />
             <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-7xl mt-4 max-w-4xl mx-auto">
               <span className="bg-linear-to-tr from-white via-[#c2d7ff] to-[#0097ff] bg-clip-text text-transparent">
                 Ape boldly, Risk Smarter & Stay Covered.
               </span>
             </h1>
-            <p className="font-light md:text-2xl mt-4">
+            <p className="font-light md:text-2xl max-w-md mx-auto mt-4">
               On-chain protection for the riskiest minutes of a token launch.
             </p>
           </div>
@@ -137,8 +140,25 @@ export default function Home() {
                   <br /> No paperwork. No custody. No manual claims.
                 </p>
                 <div className="w-full flex justify-center items-center gap-2 md:flex-row mt-2 lg:mt-0 lg:justify-end">
-                  <Button size="lg">Get Protected</Button>
-                  <Button size="lg" variant="outline">
+                  <Button
+                    size="lg"
+                    onClick={() =>
+                      toast("Not available yet", {
+                        position: "bottom-center",
+                      })
+                    }
+                  >
+                    Get Protected
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    onClick={() =>
+                      toast("Not available yet", {
+                        position: "bottom-center",
+                      })
+                    }
+                  >
                     Integrate ApeCover
                   </Button>
                 </div>
@@ -223,8 +243,8 @@ export default function Home() {
         {/* highlights */}
         <div id="utility" className="max-w-6xl mx-auto py-10">
           <div className="space-y-6 text-center">
-            <div className="text-left space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0 lg:items-center">
-              <h2 className="text-2xl font-bold text-center mb-2 lg:text-4xl ">
+            <div className="text-left space-y-4 md:grid md:grid-cols-2 md:gap-4 md:space-y-0 md:items-stretch">
+              <h2 className="text-2xl mb-6 font-bold text-center mb-2 md:text-6xl md:text-left lg:text-4xl ">
                 <HugeiconsIcon
                   icon={AiSecurity03Icon}
                   className="inline-block mr-2"
@@ -242,7 +262,7 @@ export default function Home() {
                     strokeWidth={1.5}
                     className=" mr-2"
                   />
-                  Short-Term Protection
+                  <CardTitle>Short-Term Protection</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
@@ -258,7 +278,7 @@ export default function Home() {
                     color="#0097ff"
                     strokeWidth={1.5}
                   />
-                  Automatic Settlement
+                  <CardTitle>Automatic Settlement</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
@@ -275,7 +295,7 @@ export default function Home() {
                     color="#0097ff"
                     strokeWidth={1.5}
                   />
-                  Data-Driven Pricing
+                  <CardTitle>Data-Driven Pricing</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
@@ -292,7 +312,7 @@ export default function Home() {
                     color="#0097ff"
                     strokeWidth={1.5}
                   />
-                  Risk Screening
+                  <CardTitle>Risk Screening</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
@@ -308,7 +328,7 @@ export default function Home() {
                     color="#0097ff"
                     strokeWidth={1.5}
                   />
-                  Non-Custodial
+                  <CardTitle>Non-Custodial</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription>
@@ -323,7 +343,7 @@ export default function Home() {
         {/* choose */}
         <div
           id="protections"
-          className="max-w-6xl mx-auto py-10 lg:grid lg:grid-cols-2 lg:gap-4 lg:items-center"
+          className="max-w-6xl mx-auto py-10 space-y-6 md:space-y-0 md:grid md:grid-cols-2 md:gap-4 md:items-center"
         >
           <div className="space-y-6 text-center">
             <Card className="overflow-x-auto px-4 text-left">
@@ -384,14 +404,27 @@ export default function Home() {
             </p>
           </div>
           <Card>
-            <CardHeader>Launchpad / DEX → ApeCover → Trader</CardHeader>
+            <CardHeader>
+              <CardTitle>Launchpad / DEX → ApeCover → Trader</CardTitle>
+            </CardHeader>
             <CardContent>
-              Platforms can integrate ApeCover without building their own
-              underwriting and protection infrastructure. The protocol already
-              includes a universal router, venue adapters and partner SDK.
+              <CardDescription>
+                Platforms can integrate ApeCover without building their own
+                underwriting and protection infrastructure. The protocol already
+                includes a universal router, venue adapters and partner SDK.
+              </CardDescription>
             </CardContent>
             <CardFooter>
-              <Button size="lg">Integrate ApeCover</Button>
+              <Button
+                size="lg"
+                onClick={() =>
+                  toast("Not available yet", {
+                    position: "bottom-center",
+                  })
+                }
+              >
+                Integrate ApeCover
+              </Button>
             </CardFooter>
           </Card>
         </div>
@@ -406,7 +439,7 @@ export default function Home() {
             </h2>
             <Accordion
               type="multiple"
-              className="max-w-xl mx-auto"
+              className="max-w-2xl mx-auto"
               defaultValue={["notifications"]}
             >
               {faqItems.map((item) => (
@@ -425,11 +458,30 @@ export default function Home() {
             <HeroBackground />
             <CardContent className="text-center">
               <span className="text-4xl font-bold">Ape Into the Next One.</span>
-              <span>Don't eliminate the risk. Make the risk measurable.</span>
+              <CardDescription>
+                Don't eliminate the risk. Make the risk measurable.
+              </CardDescription>
             </CardContent>
             <CardFooter className="flex justify-center items-center gap-2">
-              <Button size="lg">Get Protected</Button>
-              <Button size="lg" variant="outline">
+              <Button
+                size="lg"
+                onClick={() =>
+                  toast("Not available yet", {
+                    position: "bottom-center",
+                  })
+                }
+              >
+                Get Protected
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() =>
+                  toast("Not available yet", {
+                    position: "bottom-center",
+                  })
+                }
+              >
                 Integrate Cover
               </Button>
             </CardFooter>
@@ -452,6 +504,7 @@ export default function Home() {
                   alt="ApeCover"
                   width="170"
                   height="170"
+                  className="img cursor-pointer"
                 />
               </Link>
               <div className="flex flex-col justify-center items-center text-center md:justify-end md:items-end md:text-right">

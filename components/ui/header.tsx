@@ -7,7 +7,6 @@ import {
   SheetHeader,
   SheetTitle,
   SheetFooter,
-  SheetClose,
 } from "./sheet";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { PanelLeftOpenIcon } from "@hugeicons/core-free-icons";
@@ -23,7 +22,7 @@ export function Header() {
             alt="ApeCover"
             width="100"
             height="100"
-            className="cursor-pointer "
+            className="cursor-pointer img"
             priority
           />
         </Link>
@@ -31,9 +30,6 @@ export function Header() {
           <ul className="hidden md:flex gap-4">
             <li>
               <Link href="#how">How it works?</Link>
-            </li>
-            <li>
-              <Link href="#utility">Utility</Link>
             </li>
             <li>
               <Link href="#protections">Protections</Link>
@@ -55,9 +51,6 @@ export function Header() {
                   <ul className="flex flex-col gap-4">
                     <li>
                       <Link href="#how">How it works?</Link>
-                    </li>
-                    <li>
-                      <Link href="#utility">Utility</Link>
                     </li>
                     <li>
                       <Link href="#protections">Protections</Link>
