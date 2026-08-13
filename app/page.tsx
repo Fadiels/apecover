@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/card";
 import { Header } from "@/components/ui/header";
 import { HeroBackground } from "@/components/ui/heroBackground";
+import { Marker, MarkerContent } from "@/components/ui/marker";
 import {
   Table,
   TableBody,
@@ -36,6 +37,9 @@ import {
   AiSecurity03Icon,
   StarsIcon,
   EarthLockIcon,
+  CheckmarkBadge01Icon,
+  HeartHandshakeIcon,
+  TokenCircleIcon,
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
@@ -386,6 +390,132 @@ export default function Home() {
             priority
           />
         </div>
+
+        {/* audit */}
+        <div id="audit" className="max-w-6xl mx-auto py-10">
+          <div className="space-y-6">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold lg:text-4xl">
+                <HugeiconsIcon
+                  icon={CheckmarkBadge01Icon}
+                  className="inline-block mr-2"
+                />
+                <span className="bg-linear-to-tr from-white via-[#c2d7ff] to-[#0097ff] bg-clip-text text-transparent">
+                  Security & Audit
+                </span>
+              </h2>
+              <CardDescription>Built With Security in Mind</CardDescription>
+            </div>
+            <p>
+              ApeCover is rigorously tested and designed with multiple layers of
+              protection across smart contracts, pricing and reserves. 1–2
+              independent third-party audits will be conducted before launch.
+            </p>
+            <div className="space-y-2">
+              <span className="font-bold block">audited by:</span>
+              <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+                <Marker role="status">
+                  <MarkerContent className="shimmer">Thinking...</MarkerContent>
+                </Marker>
+                <Marker role="status">
+                  <MarkerContent className="shimmer">Thinking...</MarkerContent>
+                </Marker>
+                <Marker role="status">
+                  <MarkerContent className="shimmer">Thinking...</MarkerContent>
+                </Marker>
+                <Marker role="status">
+                  <MarkerContent className="shimmer">Thinking...</MarkerContent>
+                </Marker>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* partners */}
+        <div
+          id="partners"
+          className="max-w-6xl mx-auto py-10 md:grid md:grid-cols-2 md:gap-6 md:items-center"
+        >
+          <Card>
+            <CardContent>
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <h2 className="text-2xl font-bold lg:text-4xl">
+                    <HugeiconsIcon
+                      icon={HeartHandshakeIcon}
+                      className="inline-block mr-2"
+                    />
+                    <span className="bg-linear-to-tr from-white via-[#c2d7ff] to-[#0097ff] bg-clip-text text-transparent">
+                      Partners
+                    </span>
+                  </h2>
+                  <CardDescription>
+                    Protection, Built Into Your Platform
+                  </CardDescription>
+                </div>
+                <p>
+                  Integrate ApeCover into your launchpad, DEX, wallet or Web3
+                  application and offer users on-chain protection without
+                  building the infrastructure yourself.
+                </p>
+                <Button
+                  size="lg"
+                  onClick={() =>
+                    toast("Coming soon!", {
+                      position: "bottom-center",
+                    })
+                  }
+                >
+                  Become a Partner →
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+          <Image
+            src="/img/asset-3.png"
+            alt="ApeCover"
+            width="500"
+            height="500"
+            className="img mx-auto lg:order-2"
+          />
+        </div>
+
+        {/* apecover token */}
+        <div
+          id="apecover-token"
+          className="max-w-6xl mx-auto py-10 md:grid md:grid-cols-2 md:gap-6 md:items-center"
+        >
+          <div className="space-y-6 md:order-2">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold lg:text-4xl">
+                <HugeiconsIcon
+                  icon={TokenCircleIcon}
+                  className="inline-block mr-2"
+                />
+                <span className="bg-linear-to-tr from-white via-[#c2d7ff] to-[#0097ff] bg-clip-text text-transparent">
+                  ApeCover Token
+                </span>
+              </h2>
+              <CardDescription>Powering the ApeCover Ecosystem</CardDescription>
+            </div>
+            <p>
+              The ApeCover Token will support ecosystem growth through rewards
+              and incentives, aligning users, partners and the broader ApeCover
+              community.
+              <br />
+              Token details and launch information will be announced officially.
+            </p>
+          </div>
+          <Image
+            src="/img/asset-4.png"
+            alt="ApeCover"
+            width="500"
+            height="500"
+            className="img mx-auto"
+            priority
+          />
+        </div>
+
         {/* highlights II */}
         <div className="space-y-6 max-w-6xl mx-auto">
           <div className="space-y-4">
@@ -526,6 +656,15 @@ export default function Home() {
                   </li>
                   <li>
                     <Link href="#protection">Protection</Link>
+                  </li>
+                  <li>
+                    <Link href="#audit">Audit</Link>
+                  </li>
+                  <li>
+                    <Link href="#partners">Partners</Link>
+                  </li>
+                  <li>
+                    <Link href="#apecover-token">ApeCover</Link>
                   </li>
                   <li>
                     <Link href="#faq">FAQs</Link>

@@ -35,6 +35,15 @@ export function Header() {
               <Link href="#protections">Protections</Link>
             </li>
             <li>
+              <Link href="#audit">Audit</Link>
+            </li>
+            <li>
+              <Link href="#partners">Partners</Link>
+            </li>
+            <li>
+              <Link href="#apecover-token">ApeCover</Link>
+            </li>
+            <li>
               <Link href="#faq">FAQ</Link>
             </li>
           </ul>
@@ -54,6 +63,15 @@ export function Header() {
                     </li>
                     <li>
                       <Link href="#protections">Protections</Link>
+                    </li>
+                    <li>
+                      <Link href="#audit">Audit</Link>
+                    </li>
+                    <li>
+                      <Link href="#partners">Partners</Link>
+                    </li>
+                    <li>
+                      <Link href="#apecover-token">ApeCover</Link>
                     </li>
                     <li>
                       <Link href="#faq">FAQ</Link>
