@@ -41,7 +41,7 @@ export function Header() {
               <Link href="#partners">Partners</Link>
             </li>
             <li>
-              <Link href="#apecover-token">ApeCover</Link>
+              <Link href="#apecover-token">$APC Token</Link>
             </li>
             <li>
               <Link href="#faq">FAQ</Link>
@@ -71,7 +71,7 @@ export function Header() {
                       <Link href="#partners">Partners</Link>
                     </li>
                     <li>
-                      <Link href="#apecover-token">ApeCover</Link>
+                      <Link href="#apecover-token">$APC Token</Link>
                     </li>
                     <li>
                       <Link href="#faq">FAQ</Link>

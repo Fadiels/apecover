@@ -664,7 +664,7 @@ export default function Home() {
                     <Link href="#partners">Partners</Link>
                   </li>
                   <li>
-                    <Link href="#apecover-token">ApeCover</Link>
+                    <Link href="#apecover-token">$APC Token</Link>
                   </li>
                   <li>
                     <Link href="#faq">FAQs</Link>
@@ -692,7 +692,7 @@ export default function Home() {
                 <span className="font-bold">Partners</span>
                 <ul>
                   <li>
-                    <Link href="/">Integrate ApeSafe</Link>
+                    <Link href="/">Integrate ApeCover</Link>
                   </li>
                   <li>
                     <Link href="/">Partner Portal</Link>
@@ -728,11 +728,6 @@ export default function Home() {
                 </ul>
               </div>
             </Card>
-            <div className="text-center overflow-hidden">
-              <span className="font-bold text-6xl bg-linear-to-br from-black via-[#07456e] to-black bg-clip-text text-transparent lg:text-[200px]">
-                APECOVER
-              </span>
-            </div>
             <span className="font-light text-xs">
               © 2026 ApeCover. All rights reserved.
             </span>

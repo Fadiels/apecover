@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     title: "ApeCover",
     description:
       "On-chain protection for the riskiest minutes of a token launch.",
-    images: ["/img/apesafe-icon.png"],
+    images: ["/img/apecover-icon.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "ApeCover",
     description:
       "On-chain protection for the riskiest minutes of a token launch.",
-    images: ["/img/apesafe-icon.png"],
+    images: ["/img/apecover-icon.png"],
   },
 };
 
